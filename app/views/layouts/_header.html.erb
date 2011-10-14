@@ -1,7 +1,8 @@
 <div id="header">
-  <div id="headLogo"><em>powered by</em> Stanzr</div>
+  <div id="headLogo"><a href="http://blog.stanzr.com/" class="blindlink"><em>powered by</em> Stanzr</a></div>
 <%
-  if false
+  # Don't show our general login links on the landing page
+  unless request.fullpath == '/'
 %>
   <ul id="topnav">
     <li class="navgroup-left">

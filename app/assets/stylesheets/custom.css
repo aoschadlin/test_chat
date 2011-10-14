@@ -37,21 +37,53 @@ navgroup-alone a {
 }
 
 .userChoice {
-    width: 450px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
-.userSelect {
-    background-color: rgb(220, 230, 230);
+.pretty_button_lge {
+    font-size: 30px;
+    padding: 5px 10px 6px 10px;
     border: 1px solid #aaa;
-    border-spacing: 5px 50px;
-    font-size: 2.5em;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: #888;
+    background: rgb(254,255,232);
+    background: -moz-linear-gradient(top, rgb(254,255,232) 0%, rgb(214,219,191) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(254,255,232)), color-stop(100%,rgb(214,219,191)));
+    background: -webkit-linear-gradient(top, rgb(254,255,232) 0%,rgb(214,219,191) 100%);
+    background: -o-linear-gradient(top, rgb(254,255,232) 0%,rgb(214,219,191) 100%);
+    background: -ms-linear-gradient(top, rgb(254,255,232) 0%,rgb(214,219,191) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=0 );
+    background: linear-gradient(top, rgb(254,255,232) 0%,rgb(214,219,191) 100%);  text-decoration: none;
 }
 
-.userSelect a, .userSelect a:hover, .userSelect a:active, .userSelect a:visited {
-    color: #888;
+.pretty_button_lge:link, .pretty_button_lge:hover, .pretty_button_lge:active, .pretty_button_lge:visited {
+  text-decoration: none;
+}
+
+.blindlink:link, .blindlink:hover, .blindlink:active, .blindlink:visited {
+    color: white;
     text-decoration: none;
+}
+
+.displayText {
+    text-align: center;
+    font-size: 30px;
+    color: #666;
+}
+
+.displayTextTitle {
+    font: bold;
+    text-align: center;
+    font-size: 45px;
+    color: #666;
+}
+
+.mandatory {
+    color: red;
 }
 
 #postsarea {

@@ -11,8 +11,6 @@ TestChat::Application.routes.draw do
   get "companies/index"
   get "companies/create"
   get "companies/destroy"
-  
-  devise_for :users
 
   root :to => 'main#index'
   match '/main' => "main#show"
