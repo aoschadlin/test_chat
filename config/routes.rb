@@ -1,9 +1,22 @@
 TestChat::Application.routes.draw do
+  resources :companies
+  resources :channels
+
+  get "channels/new"
+  get "channels/index"
+  get "channels/create"
+  get "channels/destroy"
+
+  get "companies/new"
+  get "companies/index"
+  get "companies/create"
+  get "companies/destroy"
+  
   devise_for :users
 
   root :to => 'main#index'
   match '/main' => "main#show"
-  match '/register' => "register#index"
+  match '/register' => "companies#new"
   
 
   # The priority is based upon order of creation:

@@ -1,0 +1,27 @@
+<h1>Registration</h1>
+<%= form_for(@company) do |f| %>
+<div>
+  <div>
+    Company
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :logo %>
+    <%= f.text_field :logo %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.submit "Save" %>
+  </div>
+</div>
+<% end %>
