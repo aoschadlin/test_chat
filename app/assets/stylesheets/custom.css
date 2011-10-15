@@ -1,6 +1,7 @@
-body {
-    margin: 0px;
-    padding: 0px;
+html, body, ul, ol, li, form, fieldset, legend
+{
+    margin: 0;
+    padding: 0;
 }
 
 #container {
@@ -84,6 +85,11 @@ navgroup-alone a {
 
 .mandatory {
     color: red;
+}
+
+.legendText {
+    font-size: 20px;
+    color: #666;
 }
 
 #postsarea {

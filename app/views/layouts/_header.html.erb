@@ -2,7 +2,7 @@
   <div id="headLogo"><a href="http://blog.stanzr.com/" class="blindlink"><em>powered by</em> Stanzr</a></div>
 <%
   # Don't show our general login links on the landing page
-  unless request.fullpath == '/'
+  unless (request.fullpath == '/' or request.fullpath == '/login')
 %>
   <ul id="topnav">
     <li class="navgroup-left">
@@ -14,11 +14,7 @@
     <li class="navgroup-left">
       <a id="head_facebook" class="sprite-facebook16" href="/api/user/oauth/facebook/login/aoschadlin"></a>
     </li>
-    <li class="navgroup-left">
-      <a id="head_signup" class="last">Sign up</a>
-    </li>
-    <li class="navgroup-alone">
-    </li>
+    <li class="navgroup-left"><%= link_to "Sign in", login_path %></li>
   </ul>
 <%
   end

@@ -3,4 +3,6 @@ class Channel < ActiveRecord::Base
   
   validates_presence_of :uuid, :name
   validates_uniqueness_of :uuid
+  
+  belongs_to :company
 end

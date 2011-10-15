@@ -7,6 +7,9 @@ class ChannelsController < ApplicationController
 
   def create
   end
+  
+  def show
+  end
 
   def destroy
   end

@@ -3,7 +3,7 @@ class MainController < ApplicationController
   end
 
   def show
-    session[:username] = params['name']
+
   end
 
 end

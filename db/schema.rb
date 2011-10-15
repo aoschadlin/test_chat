@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111014211634) do
+ActiveRecord::Schema.define(:version => 20111014214846) do
 
   create_table "channels", :force => true do |t|
     t.string   "uuid"
@@ -30,9 +30,19 @@ ActiveRecord::Schema.define(:version => 20111014211634) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email"
+    t.string   "email",                           :null => false
+    t.string   "crypted_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
   end
+
+  add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token"
 
 end

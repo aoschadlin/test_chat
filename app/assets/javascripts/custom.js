@@ -17,9 +17,4 @@ $(document).ready(function() {
             .fadeIn('slow');
         $('#postsarea').animate({ scrollTop: $('#postsarea').prop('scrollHeight') }, 1);
     });
-    
-    $('.userSelect').click(function() {
-       document.location.href = '/register';
-       return false;
-    });
 });

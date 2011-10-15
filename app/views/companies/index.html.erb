@@ -1,1 +1,9 @@
-<h1>Index</h1>
+<div class="textTitle">Company list</div>
+<div class="blindlink"><%= link_to "Add company", new_company_path %></div>
+<%
+for company in @allCompanies do
+%>
+  <div class="blindlink"><%= link_to company.name, company %></div>
+<%
+end
+%>

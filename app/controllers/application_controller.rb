@@ -4,8 +4,11 @@ class ApplicationController < ActionController::Base
   before_filter :loginRedirect, :except => [:new, :create, :destroy]
 
   def loginRedirect
-#    if not current_user
-#      redirect_to '/login'
-#    end
+    # Secondary filter that I couldn't put into the before_filter clause
+    unless request.fullpath == '/'
+      if not current_user
+        redirect_to '/login'
+      end
+    end
   end
 end

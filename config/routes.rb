@@ -1,19 +1,17 @@
 TestChat::Application.routes.draw do
+
+  get "logout" => "sessions#destroy"
+  get "login" => "sessions#new"
+  get "signup" => "users#new"
+  
+  resources :password_resets
+  resources :users
+  resources :sessions
   resources :companies
   resources :channels
 
-  get "channels/new"
-  get "channels/index"
-  get "channels/create"
-  get "channels/destroy"
-
-  get "companies/new"
-  get "companies/index"
-  get "companies/create"
-  get "companies/destroy"
-
   root :to => 'main#index'
-  match '/main' => "main#show"
+  match '/ch/:chat_id' => "channels#show"
   match '/register' => "companies#new"
   
 

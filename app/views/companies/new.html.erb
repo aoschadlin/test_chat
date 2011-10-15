@@ -1,27 +1,40 @@
-<h1>Registration</h1>
-<%= form_for(@company) do |f| %>
+<div class="displayText">Registration</div>
+<%= form_tag(companies_path, :method=>'post') do %>
 <div>
-  <div>
-    Company
-  </div>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :logo %>
-    <%= f.text_field :logo %>
-  </div>
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-  <div>
-    <%= f.submit "Save" %>
-  </div>
+  <fieldset>
+    <legend><span class="legendText">Company</span></legend>
+    <div class="field">
+      <%= label :company, :name %>
+      <%= text_field :company, :name %>
+    </div>
+    <div class="field">
+      <%= label :company, :email %>
+      <%= text_field :company, :email %>
+    </div>
+    <div class="field">
+      <%= label :company, :logo %>
+      <%= text_field :company, :logo %>
+    </div>
+    <div class="field">
+      <%= label :company, :description %>
+      <%= text_area :company, :description %>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend><span class="legendText">Default user</span></legend>
+    <div class="field">
+      <%= label :user, :email %>
+      <%= text_field :user, :email %>
+    </div>
+    <div class="field">
+      <%= label :user, :password %>
+      <%= text_field :user, :password %>
+    </div>
+    <div class="field">
+      <%= label :user, :password_confirmation %>
+      <%= text_field :user, :password_confirmation %>
+    </div>
+  </fieldset>
+  <div><%= submit_tag "Save" %></div>
 </div>
 <% end %>
